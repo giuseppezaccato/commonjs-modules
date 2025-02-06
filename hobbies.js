@@ -10,7 +10,10 @@ function freeTime(...hobbies) {
     const indice = Math.floor(Math.random() * hobbies.length);
 
     tempoLibero.push(...hobbies);
-    return tempoLibero[indice]
+    return tempoLibero[indice];
+
+    //* nel caso di restituzione di un array di stringhe cambia il return con questo sotto!
+    // return tempoLibero
 }
 
 //? console.log di prova
