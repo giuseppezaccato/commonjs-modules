@@ -1,19 +1,26 @@
 
-//task esplicito array vuoto per *bonus
-let hobbies = []
-
 //task funzione che ritorna array hobbies
-function freeTime(hob1, hob2, hob3, hob4) {
-    hobbies.push(hob1, hob2, hob3, hob4);
-    return hobbies;
+//* piccolo bonus : uso il ...rest come argomento da passare nella funzione(sembra funzionare)
+function freeTime(...hobbies) {
+
+    //task array vuoto da riempire temporaneamente
+    let tempoLibero = []
+
+    // //? funzione randomizzatrice integrabile direttamente senza doverla customizzare!
+    const indice = Math.floor(Math.random() * hobbies.length);
+
+    tempoLibero.push(...hobbies);
+    return tempoLibero[indice]
 }
 
-//task funzione variabile random *bonus
-const random = (max) => Math.floor(Math.random() * max);
+//? console.log di prova
+console.log(freeTime("tennis", "football", "coding", "gaming", "reading"))
 
-//task esporto oggetto intero
+//task esporto oggetto intero CJS
 module.exports = {
-    hobbies,
-    freeTime,
-    random
+    freeTime
 }
+
+//fix ricorda che quando esporti un oggetto è conveniente destrutturarlo prima di averne accesso!
+//! in questo caso è esattamente uguale a:
+// module.exports = freeTime
