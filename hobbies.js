@@ -17,7 +17,7 @@ function freeTime(...hobbies) {
 }
 
 //? console.log di prova
-console.log(freeTime("tennis", "football", "coding", "gaming", "reading"))
+// console.log(freeTime("tennis", "football", "coding", "gaming", "reading"))
 
 //task esporto oggetto intero CJS
 module.exports = {

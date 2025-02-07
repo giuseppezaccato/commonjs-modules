@@ -10,4 +10,5 @@ function person(firstName, lastName) {
 // console.log(person("Giuseppe", "Zaccato"))
 
 //task esporto modulo come elemento CJS
+
 module.exports = person;
